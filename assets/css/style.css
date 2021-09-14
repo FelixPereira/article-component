@@ -1,0 +1,117 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    background-color: hsl(210, 46%, 95%);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 400px 15%;
+}
+
+.container{
+    background-color: #ffffff;
+    width: 375px;
+    border-radius: 10px;
+}
+
+.card-img{
+    max-width: 100%;
+}
+
+.card_descriptin{
+    padding: 30px 30px 20px;
+}
+
+.card-title{
+    color: hsl(217, 19%, 35%);
+    line-height: 1.4;
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 12px;
+}
+
+.card-paragraph{
+    color: hsl(214, 17%, 51%);
+    line-height: 1.5;
+}
+
+.card_author-info-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 35px;
+}
+
+.card_author-info{
+    display: flex;
+    justify-content: flex-start;
+    width: 60%;
+}
+
+.card_shareIcon-container{
+    background-color: hsl(210, 46%, 95%);
+    border-radius: 30px;
+    padding: 8px;
+}
+
+.card_author-img{
+    width: 40px;
+    border-radius: 30px;
+    margin-right: 15px;
+}
+
+.card_author-{
+    display: flex;
+    flex-direction: column;
+}
+
+.card_author-name{
+    color: hsl(217, 19%, 35%);
+    font-size: 13px;
+    margin-bottom: 5px;
+}
+
+.card_date{
+    color: hsl(212, 23%, 69%);
+    font-size: 13px;
+}
+
+.card_shareOptions-icons{
+    display: flex;
+    align-items: center;
+}
+
+.card_shareOptions{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: hsl(217, 19%, 35%);
+    padding: 20px 30px;
+    border-radius: 0 0 10px 10px;
+}
+
+.shareText{
+    color: hsl(212, 23%, 69%);
+    letter-spacing: 3px;
+    font-weight: 300;
+    margin-right: 20px;
+}
+
+.card_socialIcon-item:not(:last-of-type){
+    margin-right: 10px;
+}
+
+.card_shareIcon-container-active{
+    background-color: #ffffff;
+    border-radius: 100px;
+    padding: 5px;
+}
+
+

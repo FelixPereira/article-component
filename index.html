@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="stylesheet" href="https://fonts.google.com/specimen/Manrope">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <link rel="stylesheet" href="css/style.css">
+  
+  <title>Article preview component</title>
+
+  <style>
+    .visible{
+      display: flex;
+    }
+
+    .invisible{
+      display: none;
+    }
+  </style>
+
+</head>
+<body>
+  <main class="card container">
+    <header>
+       <img class="card-img" src="images/drawers.jpg" alt="">
+    </header>
+    <div class="card_descriptin">
+      <h2 class="card-title">  Shift the overall look and feel by adding these wonderful 
+          touches to furniture in your home</h2>
+      <p class="card-paragraph">  Ever been in a room and felt like something was missing? Perhaps 
+          it felt slightly bare and uninviting. I’ve got some simple tips 
+          to help you make any room feel complete.</p>
+      <div id="author-info" class="card_author-info-container visible">
+        <div class="card_author-info">
+          <img class="card_author-img" src="images/avatar-michelle.jpg" alt="Michelle's image">
+          <div class="card_author-">
+            <strong class="card_author-name"> Michelle Appleton</strong>
+            <span class="card_date"> 28 Jun 2020</span>
+          </div>
+        </div>
+        <div class="card_shareIcon-container">
+          <a class="shareBtn" href="#">
+            <img class="card-shareIcon" src="images/icon-share.svg" alt="Share icon">
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div id="shareOption" class="card_shareOptions invisible">
+      <div class="card_shareOptions-icons">
+        <span class="shareText">SHARE</span>
+        <div class="card_socialIcons">
+          <a class="card_socialIcon-item" href="#">
+            <img src="images/icon-facebook.svg" alt="Facebook's icon">
+          </a>
+          <a class="card_socialIcon-item" href="#">
+            <img src="images/icon-twitter.svg" alt="Twitter's icon">
+          </a>
+          <a class="card_socialIcon-item" href="#">
+            <img src="images/icon-pinterest.svg" alt="Pinterest's icon">
+          </a>
+        </div>
+      </div>
+      <div class="card_shareIcon-container-active">
+        <a class="shareBtn" href="#">
+          <img class="card-shareIcon-active" src="images/icon-share.svg" alt="Share icon">
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <script>
+
+    let shareBtns = document.querySelectorAll(".shareBtn");
+    let authorInfo = document.getElementById("author-info");
+    let shareOption = document.getElementById("shareOption");
+    
+
+
+    shareBtns.forEach(btns => {
+      btns.addEventListener("click", () => {
+        if(authorInfo.classList.contains("visible")){
+          authorInfo.classList.replace("visible", "invisible");
+          shareOption.classList.replace("invisible", "visible");
+        } else if(shareOption.classList.contains("visible")){
+          shareOption.classList.replace("visible", "invisible");
+          authorInfo.classList.replace("invisible", "visible");
+        }
+      });
+    });
+
+  </script>
+</body>
+</html>
